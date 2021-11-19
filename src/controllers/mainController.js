@@ -8,10 +8,10 @@ const clients = JSON.parse(fs.readFileSync(clientsFilePath, 'utf-8'));
 
 const controller = {
     home:(req,res)=>{
-        res.sendFile('/Users/home/Documents/Node/proyecto-KRAK/src/views/home.html')
+        res.sendFile(path.join(__dirname, '../views/home.html'));
     },
     contact:(req,res)=>{
-        res.sendFile("/Users/home/Documents/Node/proyecto-KRAK/src/views/contact.html")
+        res.sendFile(path.join(__dirname, '../views/contact.html'));
     },
     store: (req, res) => {
 		let clients = JSON.parse(fs.readFileSync(clientsFilePath, 'utf-8'));
