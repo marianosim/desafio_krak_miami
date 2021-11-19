@@ -5,24 +5,27 @@
     box-sizing: border-box;
 }
 header{
-    max-width: 100%;
+    max-width: 80%;
+    position: fixed;
+    z-index: 10;
 }
 .top-header{
     max-width: 100%;
     width: 100%;
-    height: 20%;
+    height: 12%;
     top: 0%;
     left: 0%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
     background-color: white;
     padding: 10px;
     padding-top: 0%;
     color: white;
     box-sizing: border-box;
+    z-index: 10;
 }
 .container1{
     display: flex;
@@ -55,8 +58,7 @@ header{
 .hamburger {
     position: fixed;
     color: #4c5c68;
-    
-    right: 1rem;
+    right: 3rem;
     padding: 4px;
     border:  black solid 1px;
     background: white;
@@ -93,10 +95,7 @@ header{
       font-size: 24px;
       font-weight: 2000;
       list-style: none;
-      text-decoration: none;
-      
-
-     
+      text-decoration: none;     
   }
   .showMenu {
     transform: translateY(0);
@@ -108,6 +107,9 @@ header{
       position: relative;
       text-align: center;
   }
+  main{
+      margin-top: 20%;
+  }
   .main-image img{
       width: 100%;
       height: auto;
@@ -118,7 +120,6 @@ header{
     top: 40%;
     left: 10%;
     font-weight:900;
-    
     padding-top: 2%;
     padding-bottom: 2%;
     justify-content: center;
@@ -149,6 +150,7 @@ header{
   }
   .frame1{
       position: absolute;
+      display: none;
       width: 40%;
       height: 107%;
       border: 1px solid #0099A7;
@@ -285,6 +287,7 @@ header{
     border-radius: 1%;
 }
 .frame2{
+    display: none;
     position: absolute;
     width: 30vw;
     height: 60vh;
@@ -296,6 +299,7 @@ header{
 }
 .frame3{
     position: absolute;
+    display: none;
     width: 25vw;
     height: 60vh;
     border: 1px solid #0099A7;
@@ -329,12 +333,12 @@ header{
 }
 .banner2{
     width: 100%;
-    position: absolute;
+   
     height: 30%;
     display: flex;
     justify-content: space-around;
     background-color: #0099a7;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .banner2 img{
     width: 50%;
@@ -421,6 +425,36 @@ header{
     background-color: #eb9aba;
     cursor: pointer;
 }
+.bottom-navigation {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10%;
+  }
+  
+  .bottom-navigation a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .bottom-navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .bottom-navigation a.active {
+    background-color:#0099a7;
+    color: white;
+  }
 @media (min-width: 769px){
     .navbar ul {
         display: flex;
@@ -435,5 +469,20 @@ header{
     }
     .contenedor3{
         display: flex;
+    }
+    .bottom-navigation{
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .frame1, .frame2, .frame3{
+        display: inline-block;
+    }
+    main{
+        margin-top: 50px;
+    }
+    .top-header{
+        padding:  3%;
+        height: 15%;
     }
 }
