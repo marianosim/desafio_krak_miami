@@ -1,7 +1,4 @@
-//const db = require('../src/database/models');
-//const sequelize = db.sequelize;
-//const { Op } = require("sequelize");
-//const Products = db.Product;
+
 const fs = require('fs');
 const path = require('path');
 
@@ -17,6 +14,7 @@ const controller = {
         res.sendFile("/Users/home/Documents/Node/proyecto-KRAK/src/views/contact.html")
     },
     store: (req, res) => {
+		let clients = JSON.parse(fs.readFileSync(clientsFilePath, 'utf-8'));
 		let newClient = {
 			name: req.body.nombre,
 			phoneNumber: req.body.telefono,
@@ -25,9 +23,8 @@ const controller = {
 		}
 
 		clients.push(newClient);
-		let clientsJSON = JSON.stringify(clients);
+		//let clientsJSON = JSON.stringify(clients);
 		fs.writeFileSync(clientsFilePath, JSON.stringify(clients, null, ' '));
-        console.log(clients);
 
 		res.redirect('/')
 		

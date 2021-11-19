@@ -4,7 +4,7 @@ const mainController = require("../controllers/mainController");
 
 router.get("/",mainController.home);
 router.get('/contact',mainController.contact);
-router.post('/', mainController.store)
+router.post('/contact', mainController.store)
 
 
 module.exports = router;
