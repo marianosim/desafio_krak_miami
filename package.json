@@ -8,6 +8,8 @@
   "description": "Proyecto para desafío de KRAK Miami",
   "main": "index.js",
   "scripts": {
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mariano Simantob",
