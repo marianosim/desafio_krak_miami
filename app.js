@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const routesMain = require("./routers/main")
+const routesMain = require("./src/routers/main")
 
 
  
